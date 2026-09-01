@@ -1,1 +1,13 @@
 # Dev_S_Gandhi_AI
+
+Students identify AI systems they interact with every day and classify:
+
+What does the AI do? : it is used in everyday technology like smartphone chips, softwares, navigation, and prediction models. It helps to make tasks simpler by using its memory specifically RAM ( Random Access Memory ) which enables it to consider all possibilities and make decisions based on the users prompt.
+
+What data does it use : AI uses all the information from the Internet, which is updated every second, since there is a lot of false information present as well it is advertised with not a 100% correct and might give misinformation. AI provides a neater response as it knows all the information of the internet, so instead of finding a certain part in an article the AI can not only pull information from that article but from all articles related to that topic and create a custom response. Additionally, it also uses its own memory to learn from its own mistakes.
+
+What business problem : AI can help businesses save time by automating repetitive tasks and can also analyze large amounts of data quickly and accurately. It helps companies make better decisions and reduce costs. It can also improve customer service and increase efficiency.
+
+Who benefits : In terms of accessing knowledge : everybody around the world benefits from AI; a powerful tool like this can really help save time and do certain tasks in seconds where usually it takes hours or even days! And in terms of providing AI : Companies like OpenAI, Google, Claude, and thousands of other AI tools benefit by selling subscirptions to access their latest and greatest models and give users around the world the latest up to date AI. But there is a major drawback : the RAM shortage ; Companies like these are mass buying RAM sticks to run their AI models which therefore increases RAM prices for consumers.
+
+What could go wrong? : Since AI is trained off the internet which is not reliable 100%, AI can make mistakes and provide misinformation confidently. But AI even learns from its own mistakes so it is constantly learning and becoming better day by day ; by machine learning and deep-learning.
