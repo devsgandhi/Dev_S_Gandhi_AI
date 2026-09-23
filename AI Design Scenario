@@ -1,0 +1,43 @@
+1. What features?
+Distance from the restaurant to the customer, time spent preparing food, number and/or available drivers, weather conditions, traffic conditions, time of day and day of week of the order, and number of orders currently being handled by the restaurant 2.
+
+What is the label?
+Actual minutes elapsed from when an order is placed to when it is delivered.
+
+The model learns to predict this value.
+
+3. What would training data contain?
+Completed orders that includes all of the features above, and the actual minutes of elapsed time from order to delivery. The model learns the relationship between conditions such as traffic, distance, and preparation time, and final delivery time.
+
+This reflects your original supervised-learning problem, where the historical completed orders provide both the inputs to the problem and the actual outcome.
+
+Real World Problem AI Solution Worksheet.pdf 4.
+
+Why should testing data be kept separate?
+To determine how well the model actually predicts delivery times for new orders it has never seen.
+
+If tested on the same data that it trained on, it might simply be memorizing that data, rather than capturing generalizable patterns.
+
+5. What could be a false positive?
+As your model is regression, false negatives and positives do not directly correspond.
+
+If you converted this problem to a classification such as "Order will be late: yes or no" false positives would be an order that was predicted to be late, but actually arrived on time.
+
+6. What could be a false negative?
+An order predicted to be on time, but arrives late.
+
+7. Would precision or recall be more important?
+Explain.
+
+Recall would be of greater importance if you are looking for late deliveries.
+
+Missing an order that will be late could lead to an inaccurate ETA, angry customers, and loss of reputation. Higher recall will allow you to identify as many actually-late orders as you can in order to notify the customer in advance.
+
+8. What types of bad-quality data might impact this model?
+Inaccurate GPS location data, missing delivery timestamps, inaccurate restaurant prep times, inaccurate or antiquated traffic data, missing or invalid weather data, inaccurate driver available data. All of these are consistent with the data-quality issues you identified in the original assignment.
+
+9. What could cause this model to overfit?
+Too little training data, too few restaurants or locations, or not enough variation in time and weather conditions, could lead the model to only perform accurately on historical data, rather than predicting effectively on new data.
+
+10. What would make you trust-or not trust-the model's predictions?
+I would trust it if it were accurate in predicting new data, and held up well across order times, restaurants, weather and traffic conditions. I would not trust it if its predictions were inaccurate, if input data was falsely reflected, or if prediction accuracy were bad with unfamiliar restaurants, locations and conditions.
