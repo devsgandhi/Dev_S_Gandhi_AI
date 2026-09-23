@@ -1,0 +1,83 @@
+Part 1 - Understand the Business Problem
+
+What is the business problem?
+I'm focusing on prediction of delivery times for food delivery apps mainly because I've also experienced this as a consumer myself. Current applications for food delivery measure the Estimated time of arrival simply based on the distance the order is from you. Unfortunately this is usually not very accurate and do not consider traffic patterns, the impact of the weather on travelling, how busy the kitchen is or even if there is already a driver willing to pick up your order.
+
+This means that often the expected delivery time predicted by the app has little in common with when your order actually arrives.
+
+Frequently the food will not turn up on time but it's much more often slightly late, costing the business something as this leads to higher numbers of customer complaints.
+
+Why is this problem important to the organization?
+As trust is often a very precarious thing. If a customer is advised that their order will be with them in 25 minutes, and it only arrives in 50, it is unlikely this specific customer will ever believe future ETAs shown by the app again. It will result in customers canceling orders, leaving negative reviews, and even looking at rival apps.
+
+In addition to a potentially angry consumer, the restaurant is also having difficulties in terms of their kitchen schedule, since they do not always know when food will leave the restaurant or is prepared.
+
+Drivers also find their job difficult as a poor estimated arrival time leads them to have longer dwell times for orders and inefficient routing patterns. A slight variation in prediction for each individual order results in a complex and costly problem of logistics.
+
+Who is affected by this problem?
+Customers expecting their orders
+Drivers needing to optimize time and journey planning
+Restaurant staff trying to schedule food preparation
+Customer service departments that need to manage customer dissatisfaction and complaints
+Management overseeing business operations and logistics efficiency
+
+Part 2 - Identify the Data
+What data would you need?
+The distance between your location and the restaurant location, the predicted food prep time at the restaurant, availability of a driver at the time of order placement, traffic and weather conditions, the specific time and day and also how many orders the restaurant currently has to process.
+
+Where could the data come from?
+Order logs that track the timings between each process in placing, processing and delivering your order; drivers location and the GPS used when working in the application for the driver; information about the prevailing weather conditions may be collected via weather API and traffic data may be retrieved from google Maps or similar systems.
+
+How much historical data might be useful?
+I would suggest using data covering 6-12 months to ensure that my model covers all possible seasonal variations and conditions which may affect the order delivery time including the difference in busy periods for the business.
+
+What would be the most important variables?
+The most important factors determining when an order is delivered would likely be the distance, the food preparation time and the availability of a driver when the order is placed at the time.
+
+What could be missing or inaccurate?
+Food preparation time could be just a subjective estimate provided by the restaurant rather than a concrete measurement. Sometimes data transmission issues mean a GPS position can be wrong or the GPS can lag and fail to detect any unexpected detours caused by the weather or heavy traffic. Some orders may fail to record a timestamp so are lost when generating our data sets.
+
+Part 3 - Identify Features and Target
+Features:
+The distance between the restaurant and the customer
+Average or current food preparation time of the restaurant
+Number of drivers that is available at the time of the order being placed
+
+Conditions in terms of weather
+Traffic conditions
+Time and day that the order was placed
+Number of orders the restaurant is currentlyprocessing
+
+Target:
+Predicted delivery time in minutes since the order was placed and to it being delivered.
+
+Part 4 - Select the AI/ML Approach
+Supervised or Unsupervised?
+Supervised Learning
+I chose this particular technique because our business already holds data that has both the feature inputs and the result to predict- the actual delivery time for previously delivered orders. Using these historic data set the model will be able to learn which of our inputs lead to the actual delivery time. If only Unsupervised Learning were to be used our model would either look for hidden categories within the available data or the structure that lies within the collected sample data, neither of these can really help predict a specific numerical output we have been given and wish to reproduce.
+
+Classification or Prediction?
+Prediction
+The output value will be the time taken, so in this case since we predict a particular outcome by the machine, prediction was the optimal classification for this task, although regression can also be used since the outputs are numerical and not classes. Classficiation would be a lot less detailed and merely tell me whether the delivery was made successfully or not (an ON or OFF target).
+
+Part 5 - Data Quality and Business Impact
+Three data-quality problems:
+1. Incomplete Timestamps - An driver might not clock when the order is delivered due to negligence so there would be gaps in this particular piece of data, and subsequently not possible to measure accurately.
+2. Restaurants may simply write their prep times instead of accurately recording what each prep time is, meaning an over-estimation or under-estimation occurs which results in the model making incorrect predictions based on incorrect information provided by the restaurant.
+3. Up-to date Traffic Data - the actual time of order will be relatively accurate but we are using traffic data as well to feed our model though this can be up to a few minutes older so will have potentially affect the prediction at its best.
+
+What could happen if the data is poor?
+If the data quality is very low, the accuracy of our prediction is very low too. If for instance a restaurant has under estimated their preparation time over and over again we will predict that each individual will be quick too. This may result in angry and upset customers whose ETAs were consistently higher than were stated. We could even risk losing customers to our competitors on account of this issue causing lower customer retention and profits.
+
+Part 6 - Complete AI Solution Summary
+Business Problem: A company operating on a delivery application are facing an issue where they cannot predict delivery times accurately.
+
+Data Needed: The Distance to the consumer and the distance from restaurant to the customer, and estimated and actual food preparation times for the food from restaurant to consumer, driver availability; information regarding factors that may influence the estimated time of travel, such as weather and traffic conditions and also customer time and day.
+
+AI/ML Approach: Regression Model
+Type of Learning: Supervised Learning
+Model Output: predicted value relating to delivery time.
+
+Business Benefit: High levels of trust from customers after improved ETA, and efficiency in our workers and restaurants due to higher accuracy of driver and order estimations for time and distance.
+
+Potential Risk: If inputs are unreliable e.g. weather is extreme and not updated in time in to the model, the ETA prediction would give an output that would still be wrong which may harm more reputation.
