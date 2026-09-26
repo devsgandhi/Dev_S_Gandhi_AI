@@ -1,0 +1,13 @@
+# F1 Logistic Regression Project
+
+This project uses Logistic Regression to predict whether a Formula 1 driver will score points in a race.
+
+## Google Colab
+
+https://colab.research.google.com/drive/1RVUiMciclHHXwSXEIN_-v6mhWCbXW2mr?usp=sharing
+
+## Dataset
+
+The `results.csv` file used for this project is included in this repository.
+
+Dataset Source: Formula 1 World Championship Results Dataset from Kaggle.
