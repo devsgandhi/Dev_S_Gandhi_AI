@@ -1,0 +1,12 @@
+# IMDb Top 1000 Movies - Decision Tree Classification
+
+This project uses a Decision Tree classification model to predict whether a movie has an IMDb rating of 8.0 or higher.
+
+The model uses:
+- Meta_score
+- No_of_Votes
+
+It includes data preparation, train/test splitting, model training, accuracy, confusion matrix, precision, recall, F1-score, and a new movie prediction with probability.
+
+Google Colab:
+https://colab.research.google.com/drive/1N33LqvbcI6hl3SFim_lO1Uzj5t3zvXoo?usp=sharing
