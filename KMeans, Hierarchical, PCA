@@ -1,0 +1,17 @@
+# Spotify Clustering & PCA
+
+Analysis of Spotify songs from the 2010s using K-Means clustering, Hierarchical Clustering, and PCA.
+
+## Dataset
+Kaggle: Spotify Past Decades Songs (50s–10s)
+
+## Methods 
+- Data standardization
+- K-Means Clustering
+- Hierarchical Clustering
+- Principal Component Analysis (PCA)
+
+## Tools
+Python, Pandas, Scikit-learn, Matplotlib, Google Colab
+
+https://colab.research.google.com/drive/1dkctkcGwR4tupm7_6tfX-sUPMJCxxEYX?usp=sharing
